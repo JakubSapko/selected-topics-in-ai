@@ -1,8 +1,9 @@
+from typing import Callable #* aesthetics purpose
 
 #TODO: Implement a fibonacci search method 
 
 #! Cost function definition
-def func(x):
+def func(x: float) -> float:
     return x ** 4 + 2*x + 1
 
 #* Fibonacci Search method implementation
@@ -15,7 +16,7 @@ def func(x):
 #@param: eps: accuracy (the lower it is the more accurate the final result)
 #@param: func: cost function (the function you want to maximize/minimize)
 
-def fibonacciSearch(a, b, eps, func):
+def fibonacciSearch(a: float, b: float, eps: float, func: Callable[[float], float]) -> float:
 
     c = (b - a)/eps
     n = 1
