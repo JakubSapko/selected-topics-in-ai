@@ -1,10 +1,11 @@
 from typing import Callable #* aesthetics purpose
+import math
 
 #TODO: Implement a fibonacci search method 
 
 #! Cost function definition
 def func(x: float) -> float:
-    return x ** 4 + 2*x + 1
+    return math.e ** (-x) + x ** 2
 
 #* Fibonacci Search method implementation
 #* The Fibonacci search method is usually used either for minimizing or maximizing a function on a given interval
