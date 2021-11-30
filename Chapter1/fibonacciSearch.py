@@ -5,7 +5,7 @@ import math
 
 #! Cost function definition
 def func(x: float) -> float:
-    return math.e ** (-x) + x ** 2
+    return x ** 4 + 2*x + 1
 
 #* Fibonacci Search method implementation
 #* The Fibonacci search method is usually used either for minimizing or maximizing a function on a given interval
