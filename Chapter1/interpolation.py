@@ -66,3 +66,5 @@ def parabolicInterpolation(x0, x1, x2, eps1, eps2, func):
                 f0 = f_dash
     return (x0, f0)
 
+if __name__ == "__main__":
+    print(f'x0 = {parabolicInterpolation(1, 3, 4, 0.001, 0.01, func)[0]}, f0 = {parabolicInterpolation(1, 3, 4, 0.001, 0.01, func)[1]}')

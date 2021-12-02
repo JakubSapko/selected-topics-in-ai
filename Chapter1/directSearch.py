@@ -18,7 +18,7 @@ def func(x: float) -> float:
 #@param: dx: delta x - value of change
 #@param: func: cost function
 
-def directSearch(x0: float, dx: float, func: Callable[[float], float]) -> tuple([float], [float]):
+def directSearch(x0: float, dx: float, func: Callable) :
     f0 = func(x0)
     x1 = x0 + dx
     f1 = func(x1)
@@ -51,7 +51,12 @@ def directSearch(x0: float, dx: float, func: Callable[[float], float]) -> tuple(
                 x0 = x2
                 f1 = f0
                 f0 = f2
+            dx = 2*dx
+            x2 = x0 - dx
+            f2 = func(x2)
         if (f0 <= f2):
             return (x2, x1)
 
 
+if __name__ == "__main__":
+    print(f'x1 = {directSearch(2, 0.001, func)[1]}, x2 = {directSearch(2, 0.001, func)[0]}')
